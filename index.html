@@ -38,6 +38,10 @@
           message: 'Hai Vue 2'
         }
       });
+
+      socket.on('example-pong', function (data) {
+          console.log(data.toString());
+      });
     
       function aaa_(){
         socket.emit("aaa", "Hello");
