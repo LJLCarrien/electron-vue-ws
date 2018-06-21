@@ -27,6 +27,7 @@
       // You can also require other files to run in this process
       require('./renderer.js');
 
+      //For Vue js
       var app = new Vue({
         el: '#app',
         data: {
@@ -41,15 +42,16 @@
         }
       });
 
+      //Subscribe an event
       socket.on('data1', function (data) {
           console.log(data.toString());
       });
     
+      //For emit message every 3 seconds
       function aaa_(){
         socket.emit("aaa", "Hello");
         setTimeout(aaa_, 3000);
       }
-
       aaa_();
 
     </script>
