@@ -19,10 +19,17 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 git clone https://github.com/electron/electron-vue-ws
 # Go into the repository
 cd electron-vue-ws
+cd client
 # Install dependencies
 npm install
 # Run the app
 npm start
+
+if there is a modul that still must be installed, install it manually, such as :
+# install socket io
+npm install socket.io
+npm install socket.io-client
+
 ```
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
