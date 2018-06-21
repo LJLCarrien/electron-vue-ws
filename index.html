@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
     <script type="text/javascript">
       var socket = require('socket.io-client')('http://192.168.10.187:5000');
     </script>
@@ -38,9 +39,12 @@
         }
       });
     
-      socket.on('aaa', function (data) {
-          console.log(data.toString());
-      });
+      function aaa_(){
+        socket.emit("aaa", "Hello");
+        setTimeout(aaa_, 3000);
+      }
+
+      aaa_();
 
     </script>
   </body>
